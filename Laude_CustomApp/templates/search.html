@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/schedule.css' %}">
+</head>
+<body>
+    <nav>
+        <div>
+            <h1>
+                TheFerry
+            </h1>
+        </div>
+    </nav>
+    <div class="schedule-main-div">
+        <div class="top-header">
+
+            <div class="container-top">
+                <a href="/">&#60;</a>
+            </div>
+
+            <form action="/search" method="GET">
+                <input type="text" name="search" id="search" placeholder="Search Schedule ID">
+                <button type="submit">Search</button>
+            </form>
+            <h1>Hello, Admin</h1>
+        </div>
+       <div class="table-container">
+            <div class="schedule-div">
+                <div class="schedule-div-header">
+                    <h2>Results for : {{result}}</h2>
+                    <h3>Total Schedules : {{total}} Result</h3>
+                </div>
+                <div>
+                    <a href="{% url 'make' %}">
+                        Create Schedules
+                    </a>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Schedule ID</th>
+                            <th scope="col">Ship ID</th>
+                            <th scope="col">Vessel</th>
+                            <th scope="col">Origin</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Seats</th>
+                            <th scope="col">Vehicles</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data in search %}
+                            <tr>
+                                <td>{{data.scheduleId}}</td>
+                                <td>{{data.shipId}}</td>
+                                <td>{{data.vessel}}</td>
+                                <td>{{data.origin}}</td>
+                                <td>{{data.destination}}</td>
+                                <td>{{data.date}}</td>
+                                <td>{{data.time}}</td>
+                                <td>{{data.seats}}</td>
+                                <td>{{data.vehicles}}</td>
+                                <td>{{data.price}}</td>
+                                <td>{{data.status}}</td>
+                                
+                                <td><a href="/make/update/{{data.scheduleId}}">Update</a></td>
+                                
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            
+       </div>
+    </div>
+</body>
+</html>

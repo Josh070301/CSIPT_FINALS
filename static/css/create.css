@@ -1,0 +1,121 @@
+body{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444690;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px black solid;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.mid-container{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+}
+.container-top h1{
+  margin-left: 20px;
+}
+.container-top button{
+  margin-left: 20px;
+}
+.container-top a{
+  text-decoration: none;
+  color: black;
+}
+.container-top{
+  align-items: center;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px black solid;
+  box-shadow: rgb(38, 57, 77) 0px 2px 15px 1px;
+  z-index: 1;
+}
+
+.inputs label{
+  left: 0;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.inputs select{
+  margin-top: 10px;
+}
+.inputs button{
+  margin-top: 10px;
+}
+.left-container{
+  top:0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.right-container{
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.create-btn-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.create-btn{
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  margin-bottom: 10px;
+}
+.container-top a{
+  margin-left: 10px;
+  height: 30px;
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 3px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
